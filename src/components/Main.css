@@ -1,0 +1,78 @@
+.main {
+    border-bottom: 1px solid #fff;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.mainContent {
+   
+   display: flex;
+}
+
+
+.punkContainer {
+    object-fit: contain;
+}
+
+.selectedPunk {
+    height: 300px;
+    border-radius: 20px;
+}
+
+
+.punkDetails .title, .itemNumber {
+    color: #fff;
+    font-size: 50px;
+}
+
+
+.ownerDetails {
+    display: flex;
+    position: relative;
+    top: 93px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.punkDetailsContainer {
+ flex: 1;
+ margin-left: 10px;
+
+}
+
+.ownerimage{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.owner {
+    object-fit: contain;
+    display: flex;
+    border-radius: 10px;
+    border-radius: 50%;
+}
+
+.movethis {
+    margin-left: 10px;
+}
+
+
+
+/* .punkDetailsContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+} */
+
+
+.ownerNameAndHandle {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconContainer {
+    display: flex;
+}

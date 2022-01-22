@@ -1,0 +1,5 @@
+.punklist {
+    cursor: pointer;
+    display: flex;
+    overflow: scroll;
+}
