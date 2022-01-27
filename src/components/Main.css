@@ -7,6 +7,7 @@
 .mainContent {
    
    display: flex;
+   
 }
 
 
@@ -40,6 +41,15 @@
 
 }
 
+.title{
+    display: inline-block;
+
+}
+
+.itemNumber{
+    margin-left: 15px;
+}
+
 .ownerimage{
     height: 60px;
     width: 60px;
@@ -55,6 +65,11 @@
 
 .movethis {
     margin-left: 10px;
+}
+
+.movethis p:first-child{
+    min-width: 100%;
+    border: 1px solid red;
 }
 
 
@@ -75,4 +90,47 @@
 
 .iconContainer {
     display: flex;
+}
+
+
+@media screen and (max-width: 600px) {
+    .mainContent {
+        flex-direction: column;
+    }
+
+    .ownerDetails {
+        flex-direction: column;
+        top: -0px;
+        width: 100%;
+    }
+
+    .main {
+        min-height: 558px;
+        width: 100%;
+    }
+
+    .punkDetails .title, .itemNumber {
+        font-size: 30px;
+        margin: 20px 0px;
+        text-align: center;
+    }
+
+    .ownerNameAndHandle {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .movethis{
+        min-width: 50%;
+        margin: 10px 0px;
+    }
+
+    .movethis:first-child{
+        width: inherit;
+    }
+
+    .iconContainer .ownerLink img {
+        width: 50px;
+    }
 }

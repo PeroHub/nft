@@ -1,5 +1,23 @@
 .punklist {
     cursor: pointer;
     display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: scroll;
 }
+
+
+
+
+
+@media screen  and (max-width: 600px) {
+    .punklist {
+        flex-direction: column;
+        overflow: visible;
+        
+    }
+}
+
+/* .punklist::-webkit-scrollbar {
+    display: none;
+} */

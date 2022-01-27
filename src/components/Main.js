@@ -1,23 +1,33 @@
 import React from 'react'
+import { useState, useEffect } from 'react'
 import head from '../assets/owner/head.jpg'
 import twitterLogo from '../assets/owner/twitter.png'
 import instagramLogo from '../assets/owner/instagram.png'
 import moreLogo from '../assets/owner/more.png'
 import './Main.css'
 
-export const Main = () => {
+export const Main = ({selectedPunk, punkListData}) => {
+    
+    const [ activePunk, setActivePunk ] = useState(punkListData[0])
+    console.log(selectedPunk)
+
+    useEffect(() => {
+        setActivePunk(punkListData[selectedPunk])
+    },[ punkListData ,selectedPunk])
+
+
     return (
         <div className="main">
             <div className="mainContent">
                 <div className="punkHighLight">
                     <div className="punkContainer">
-                        <img className="selectedPunk" src={head} alt="" />
+                        <img className="selectedPunk" src={activePunk.image_original_url} alt="" />
                     </div>
                 </div>
                 <div className="punkDetailsContainer">
                     <div className="punkDetails">
-                        <div className="title">Bandana Punk</div>
-                        <span className="itemNumber">.#3</span>
+                        <div className="title">{activePunk.name}</div>
+                        <span className="itemNumber">.#{activePunk.token_id}</span>
                     </div>
                     
                     <div className="ownerDetails">
@@ -26,7 +36,7 @@ export const Main = () => {
                         <div className="ownerNameAndHandle">
                             <div className="owner">
                                 
-                                    <img className="ownerimage" src={head} alt="" />
+                                    <img className="ownerimage" src={activePunk.image_original_url} alt="" />
                                 
                             </div>
                            <div className="movethis">
