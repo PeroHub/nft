@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import head from '../assets/owner/head.jpg'
+// import head from '../assets/owner/head.jpg'
 import twitterLogo from '../assets/owner/twitter.png'
 import instagramLogo from '../assets/owner/instagram.png'
 import moreLogo from '../assets/owner/more.png'
