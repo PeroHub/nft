@@ -1,8 +1,8 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import { Header } from './components/Header';
-import { CollectionCard } from './components/CollectionCard';
-import punkHead from './assets/owner/head.jpg'
+// import { CollectionCard } from './components/CollectionCard';
+// import punkHead from './assets/owner/head.jpg'
 import axios from "axios"
 import { useState, useEffect } from 'react'
 import { Punklist } from './components/Punklist';
