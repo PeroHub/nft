@@ -12,7 +12,7 @@ export const Header = () => {
 
            <div className="searchBar">
             <div className="searchIconContainer">
-                <img src={searchIcon} />
+                <img src={searchIcon} alt="search" />
             </div>
             <input className="searchInput" placeholder="collection items or user ...... "/>
            </div>
