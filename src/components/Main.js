@@ -32,12 +32,9 @@ export const Main = ({selectedPunk, punkListData}) => {
                     
                     <div className="ownerDetails">
                     
-
                         <div className="ownerNameAndHandle">
                             <div className="owner">
-                                
-                                    <img className="ownerimage" src={activePunk.image_original_url} alt="" />
-                                
+                                <img className="ownerimage" src={activePunk.image_original_url} alt="" />
                             </div>
                            <div className="movethis">
                             <p style={{color: "#fff"}}>0x0446d9c542CEcb4f156F7fCf5E1E189af23FC77D</p>

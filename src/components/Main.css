@@ -68,8 +68,8 @@
 }
 
 .movethis p:first-child{
-    min-width: 100%;
-    border: 1px solid red;
+    width: 100%;
+    
 }
 
 
@@ -124,10 +124,13 @@
     .movethis{
         min-width: 50%;
         margin: 10px 0px;
+        width: 100%;
     }
 
-    .movethis:first-child{
+    .movethis P:first-child{
         width: inherit;
+        position: relative;
+        right: 30px;
     }
 
     .iconContainer .ownerLink img {
