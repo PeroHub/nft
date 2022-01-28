@@ -33,12 +33,9 @@ function App() {
 
     }
 
-
-    
-
     return getNftValues()
 
-  }, [])
+  })
   return (
     <div className="app">
       <Header />
