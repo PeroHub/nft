@@ -13,29 +13,56 @@ import { Main } from './components/Main';
 function App() {
 
   const [ punkListData, setPunkListData ] = useState([])
-  // const [ networkError, setNetworkError ] = useState(false)
+  const [ networkError, setNetworkError ] = useState(false)
   // const [ punkLoader, setPunkLoader ] = useState(false)
   const [ selectedPunk, setSelectedPunk ] = useState(0)
+
+
+  const obj = {
+    x: 1
+  }
+
+  const obj2 = {
+    ...obj,
+    x: 2
+    
+  }
+
+  console.log(obj2.x)
 
   
 
   useEffect(() => {
     
-      const getNftValues = async () => {
-       try{
-        const values = await axios.get('https://testnets-api.opensea.io/assets?asset_contract_address=0x3BE078E04eEE399310d4f5a90C114CCa4E9875Ac&order_direction=asc')
-        console.log(values.data.assets)
-        setPunkListData(values.data.assets)
-        
-       } catch(e) {
-          console.log(e)
-       }
+    const options = {mode: 'no-cors'};
 
-    }
-
-    return getNftValues()
-
+  fetch('https://testnets-api.opensea.io/assets?asset_contract_address=0x3BE078E04eEE399310d4f5a90C114CCa4E9875Ac&order_direction=asc', {
+  method: 'GET',
+  header: 'Access-Control-Allow-Origin: *',
   })
+   .then(response => response.json())
+   .then(values => {
+     console.log(values)
+     setPunkListData(values.assets)
+   })
+   .catch(err => {
+     console.log(err)
+   })
+    //   const getNftValues = async () => {
+    //    try{
+    //     const values = await axios.get('https://testnets-api.opensea.io/assets?asset_contract_address=0x3BE078E04eEE399310d4f5a90C114CCa4E9875Ac&order_direction=asc')
+    //     console.log(values.data.assets)
+    //     setPunkListData(values.data.assets)
+        
+    //    } catch(e) {
+    //       console.log(e)
+    //    }
+
+    // }
+
+    
+
+  }, [])
   return (
     <div className="app">
       <Header />
