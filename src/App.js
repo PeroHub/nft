@@ -37,7 +37,7 @@ function App() {
   fetch('https://testnets-api.opensea.io/assets?asset_contract_address=0x3BE078E04eEE399310d4f5a90C114CCa4E9875Ac&order_direction=asc', {
   method: 'GET',
   header: {
-    'Access-Control-Allow-Origin': 'https://testnets-api.opensea.io/assets?asset_contract_address=0x3BE078E04eEE399310d4f5a90C114CCa4E9875Ac&order_direction=asc',
+    'Access-Control-Allow-Origin': 'https://nftcollections.netlify.app',
     'Access-Control-Allow-Credentials': true
   }
 
